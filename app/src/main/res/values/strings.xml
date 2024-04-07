@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">RecipeOrganizer</string>
+    <string name="name">$name</string>
+
+        <string name="search_bar_hint">Search...</string>
+        <string name="category_name">Category</string>
+        <string name="recipe_name">Item name</string>
+        <string name="recipe_prep_time">Preparation time</string>
+
+        <string name="navigation_screen_title">Filters</string>
+        <string name="preparation_submenu_title">Preparation time</string>
+        <string name="max_prep_time_title">Max preparation time</string>
+        <string name="min_prep_time_title">Maximal preparation time</string>
+        <string name="hour_field">Hour</string>
+        <string name="minute_field">Minute</string>
+        <string name="ingredients_submenu_title">Ingredients</string>
+        <string name="ingredient_name">Ingredient name</string>
+
+        <string name="ingredient_amount">Amount</string>
+        <string name="recipe">Very long recipe</string>
+
+        <string name="add_recipe_title">Add a recipe</string>
+        <string name="input_recipe_name_title">Recipe name</string>
+        <string name="prep_time_title">Preparation time</string>
+        <string name="input_recipe_title">Step-by-step recipe</string>
+        <string name="input_ingredient_name_title">Ingredient name</string>
+        <string name="input_amount_title">Amount</string>
+        <string name="categories_submenu_title">Categories</string>
+        <string name="add_image_button">Add an image</string>
+
+        <string name="input_category_name">Category name</string>
+        <string name="add_category_button">Add category</string>
+        <string name="confirm_button">Confirm</string>
+
+        <string name="manage_categories_title">Manage categories</string>
+</resources>
