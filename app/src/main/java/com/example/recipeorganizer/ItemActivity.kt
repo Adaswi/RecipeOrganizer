@@ -1,5 +1,6 @@
 package com.example.recipeorganizer
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
@@ -11,6 +12,7 @@ import com.example.recipeorganizer.Models.CategoryModel
 import com.example.recipeorganizer.Models.IngredientModel
 import com.example.recipeorganizer.Models.MockData
 import com.example.recipeorganizer.Models.RecipeModel
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.chip.Chip
@@ -21,6 +23,9 @@ class ItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.item_activity)
 
+        val intent = getIntent()
+        val recipeId: Int = intent.getIntExtra("recipeItemKey", 0)
+
         val materialToolbar = findViewById<MaterialToolbar>(R.id.topAppBarMaterials)
         val imageView = findViewById<ImageView>(R.id.image)
         val prepTimeText = findViewById<TextView>(R.id.prepTimeText)
@@ -29,12 +34,17 @@ class ItemActivity : AppCompatActivity() {
         val chipGroup = findViewById<ChipGroup>(R.id.chipGroup)
 
         val mockData: MockData = MockData()
-        val recipe: RecipeModel = mockData.recipes[0]
+        val recipe: RecipeModel = mockData.recipes[recipeId-1]
         val ingredients: ArrayList<IngredientModel> = mockData.ingredients
         val categories: ArrayList<CategoryModel> = mockData.categories
 
+
         val imgUri: Uri = Uri.parse("android.resource://" + packageName + "/drawable/" + recipe.imagePath)
         val time = recipe.preparationTime
+
+        materialToolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         materialToolbar.title = recipe.name
 

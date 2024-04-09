@@ -38,6 +38,47 @@ class MockData {
                     "STEP 11 Add extra pasta cooking water to keep it saucy (several tablespoons should do it). You don’t want it wet, just moist. Season with a little salt, if needed. " +
                     "STEP 12 Use a long-pronged fork to twist the pasta on to the serving plate or bowl. Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper. If the dish does get a little dry before serving, splash in some more hot pasta water and the glossy sauciness will be revived.",
             "spaghetti_carbonara"
+        ),
+        RecipeModel(
+            2,
+            "Shrimp soup",
+            25,
+            "STEP 1 In a large saucepan over medium heat, combine chicken broth, beef broth and shrimp consomme. Bring to a simmer, then strain. \n" +
+                    "STEP 2 Return broth to pot and add shrimp and dill. Heat through and adjust seasonings. Garnish with chopped green onion.",
+            "shrimp_soup"
+        ),
+        RecipeModel(
+            3,
+            "Chicken sandwich",
+            20,
+            "STEP 1 In a small bowl combine shredded chicken, kimchi, and mayonnaise.\n" +
+                    "STEP 2 Preheat a small skillet over medium heat. Spread ½ tablespoon butter on one side of a slice of bread. Place 1 slice bread butter-side-down in skillet; place 1 slice provolone and 1 slice Havarti cheese onto bread. Top with chicken mixture, then with remaining slice provolone and remaining Havarti. Butter second bread slice with remaining butter on one side and place butter-side-up on top of sandwich.\n" +
+                    "STEP 3 Cook sandwich in skillet until bread is lightly browned and flip over, about 2 ½ minutes per side.",
+            "chicken_sandwich"
+            ),
+        RecipeModel(
+            4,
+            "Rice with eggs and zucchini",
+            30,
+            "In a wok or large fry pan, heat vegetable oil. Saute garlic for 30 seconds.\n" +
+                    "Add carrots and zucchini. Fry for 2 to 3 minutes.\n" +
+                    "Push the vegetables to the side of the wok or large fry pan. Lightly beat the eggs and pour into the wok or fry pan. Allow eggs to set.\n" +
+                    "When eggs are almost set, add rice over the eggs and vegetables.\n" +
+                    "Add ground pepper and soy sauce. Stir to get everything well mixed. This will take 3 to 4 minutes.\n" +
+                    "Half way through stir frying, add salt to taste. Continue to stir fry until rice is dry and fluffy.\n" +
+                    "Stir in sliced green onions. Turn off stove.\n" +
+                    "Dish into bowls and serve immediately.",
+            "rice_with_eggs"
+        ),
+        RecipeModel(
+            5,
+            "Duck with thyme",
+            90,
+            "1. Score the skin of the duck 4 or 5 times, being careful not to cut through into the meat. Put the duck in a roasting tin in the sink, pour over a kettleful of boiling water then drain and allow to dry for 1-2 hours, to prepare the fatty skin ready for roasting.\n" +
+                    "2. Preheat the oven to 150˚C, gas mark 2. Rub the duck inside and out with a generous amount of salt and the thyme leaves. Pour over the honey and stock and roast for 2 hours 15 minutes. Every 45 minutes, baste the duck with the juices and fats from the tray. If the juices turn too thick, add a little more stock or water.\n" +
+                    "3. When the fat seems excessive, carefully pour some into a jug (save it to cook roast potatoes). After 2 hours 15 minutes, check the duck is thoroughly cooked; it should be tender to the touch and the juices should run clear. If it’s not ready, baste again and cook for another 10 minutes or so, until it is tender. Transfer to a serving plate and allow to rest for 25 minutes.\n" +
+                    "4. Meanwhile, strain off the fat from the roasting tin and make a gravy by reducing the cooking juices over a high heat. Garnish the duck with extra thyme sprigs, sprinkle with sea salt and serve with the gravy. ",
+            "duck_with_thyme"
         )
     )
 }

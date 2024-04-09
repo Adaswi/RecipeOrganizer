@@ -28,6 +28,12 @@
                     android:contentDescription="@string/navigation_screen_title"
                     app:icon="@drawable/menu_icon_48px_bold" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo" />
+
                 <com.google.android.material.search.SearchBar
                     android:id="@+id/search_bar"
                     android:layout_width="match_parent"
@@ -46,7 +52,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:animateLayoutChanges="true"
-                    app:singleLine="true">
+                    app:singleLine="true"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
                     <Space
                         android:layout_width="8dp"
                         android:layout_height="match_parent" />
