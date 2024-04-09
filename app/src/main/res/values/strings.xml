@@ -18,6 +18,8 @@
 
         <string name="ingredient_amount">Amount</string>
         <string name="recipe">Very long recipe</string>
+        <string name="edit">Edit recipe</string>
+        <string name="delete">Delete recipe</string>
 
         <string name="add_recipe_title">Add a recipe</string>
         <string name="input_recipe_name_title">Recipe name</string>
