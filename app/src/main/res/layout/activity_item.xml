@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
             app:title="@string/recipe_name"
-            app:menu="@menu/item_activity_menu"
+            app:menu="@menu/activity_item_menu"
             app:navigationIcon="@drawable/back_icon" />
 
     </com.google.android.material.appbar.AppBarLayout>

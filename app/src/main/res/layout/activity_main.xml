@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -69,16 +69,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"/>
-                <!-- Scrollable content added dynamically -->
-            </LinearLayout>
+                tools:listitem="@layout/item_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -94,6 +93,7 @@
             android:id="@+id/cl_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clickable="true"
             android:background="@color/material_on_primary_emphasis_medium"
             android:alpha="0"
             android:visibility="gone">

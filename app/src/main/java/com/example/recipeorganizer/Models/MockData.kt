@@ -1,27 +1,27 @@
 package com.example.recipeorganizer.Models
 
 class MockData {
-    val categories: ArrayList<CategoryModel> = arrayListOf(
-        CategoryModel(1,"Breakfast"),
-        CategoryModel(2,"Lunch"),
-        CategoryModel(3,"Dinner"),
-        CategoryModel(4,"Supper"),
-        CategoryModel(5,"Easter"),
-        CategoryModel(6,"Christmas"),
-        CategoryModel(7,"Thanksgiving"),
-        CategoryModel(8,"Grandma's"))
-    val ingredients: ArrayList<IngredientModel> = arrayListOf(
-        IngredientModel(1,"Pancetta", "100g"),
-        IngredientModel(2,"Pecorino cheese", "50g"),
-        IngredientModel(3,"Parmesan", "50g"),
-        IngredientModel(4,"Large eggs", "x2"),
-        IngredientModel(5,"Spaghetti", "350g"),
-        IngredientModel(6,"Garlic cloves", "x2"),
-        IngredientModel(7,"Butter", "50g"),
-        IngredientModel(8,"Sea salt", null),
-        IngredientModel(9,"Black pepper", null))
-    val recipes: ArrayList<RecipeModel> = arrayListOf(
-        RecipeModel(
+    val categories: ArrayList<Category> = arrayListOf(
+        Category(1,"Breakfast"),
+        Category(2,"Lunch"),
+        Category(3,"Dinner"),
+        Category(4,"Supper"),
+        Category(5,"Easter"),
+        Category(6,"Christmas"),
+        Category(7,"Thanksgiving"),
+        Category(8,"Grandma's"))
+    val ingredients: ArrayList<Ingredient> = arrayListOf(
+        Ingredient(1,"Pancetta", "100g"),
+        Ingredient(2,"Pecorino cheese", "50g"),
+        Ingredient(3,"Parmesan", "50g"),
+        Ingredient(4,"Large eggs", "x2"),
+        Ingredient(5,"Spaghetti", "350g"),
+        Ingredient(6,"Garlic cloves", "x2"),
+        Ingredient(7,"Butter", "50g"),
+        Ingredient(8,"Sea salt", null),
+        Ingredient(9,"Black pepper", null))
+    val recipes: ArrayList<Recipe> = arrayListOf(
+        Recipe(
             1,
             "Spaghetti carbonara",
             40,
@@ -39,7 +39,7 @@ class MockData {
                     "STEP 12 Use a long-pronged fork to twist the pasta on to the serving plate or bowl. Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper. If the dish does get a little dry before serving, splash in some more hot pasta water and the glossy sauciness will be revived.",
             "spaghetti_carbonara"
         ),
-        RecipeModel(
+        Recipe(
             2,
             "Shrimp soup",
             25,
@@ -47,7 +47,7 @@ class MockData {
                     "STEP 2 Return broth to pot and add shrimp and dill. Heat through and adjust seasonings. Garnish with chopped green onion.",
             "shrimp_soup"
         ),
-        RecipeModel(
+        Recipe(
             3,
             "Chicken sandwich",
             20,
@@ -56,7 +56,7 @@ class MockData {
                     "STEP 3 Cook sandwich in skillet until bread is lightly browned and flip over, about 2 ½ minutes per side.",
             "chicken_sandwich"
             ),
-        RecipeModel(
+        Recipe(
             4,
             "Rice with eggs and zucchini",
             30,
@@ -70,7 +70,7 @@ class MockData {
                     "Dish into bowls and serve immediately.",
             "rice_with_eggs"
         ),
-        RecipeModel(
+        Recipe(
             5,
             "Duck with thyme",
             90,

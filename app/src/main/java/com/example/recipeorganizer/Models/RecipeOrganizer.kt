@@ -1,10 +1,10 @@
-package com.example.recipeorganizer
+package com.example.recipeorganizer.Models
 
 import android.provider.BaseColumns
 
 object RecipeOrganizer {
     object Recipe : BaseColumns {
-        const val TABLE_NAME = "recipes"
+        const val TABLE_NAME = "recipe"
         const val COLUMN_NAME_RECIPE_NAME = "name"
         const val COLUMN_NAME_PREP_TIME = "preparation_time"
         const val COLUMN_NAME_INSTRUCTIONS = "instructions"
@@ -12,13 +12,13 @@ object RecipeOrganizer {
     }
 
     object Ingredient : BaseColumns {
-        const val TABLE_NAME = "ingredients"
+        const val TABLE_NAME = "ingredient"
         const val COLUMN_NAME_INGREDIENT_NAME = "name"
         const val COLUMN_NAME_AMOUNT = "amount"
     }
 
     object Category : BaseColumns {
-        const val TABLE_NAME = "categories"
+        const val TABLE_NAME = "category"
         const val COLUMN_NAME_CATEGORY_NAME = "name"
     }
 
