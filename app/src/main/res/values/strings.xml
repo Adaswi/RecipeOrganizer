@@ -2,7 +2,7 @@
     <string name="app_name">RecipeOrganizer</string>
     <string name="name">$name</string>
 
-    <string name="search_bar_hint">Search...</string>
+    <string name="search_bar_hint">Search…</string>
     <string name="category_name">Category</string>
     <string name="recipe_name">Item name</string>
     <string name="recipe_prep_time">Preparation time</string>
@@ -35,4 +35,12 @@
     <string name="confirm_button">Confirm</string>
 
     <string name="manage_categories_title">Manage categories</string>
+
+    <string name="no_recipe_name">Recipe name is required</string>
+    <string name="no_prep_time">Preparation time cannot be equal to zero</string>
+    <string name="no_instructions">Instructions are required</string>
+    <string name="no_ingredients">At least one ingredient required</string>
+    <string name="no_image">Image is required</string>
+    <string name="no_ingredient_name">Ingredient name is required</string>
+
 </resources>

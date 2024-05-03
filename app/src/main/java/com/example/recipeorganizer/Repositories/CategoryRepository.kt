@@ -18,4 +18,16 @@ class CategoryRepository(private val categoryDao: CategoryDao) {
     suspend fun insert(category: Category) {
         categoryDao.insert(category)
     }
+
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun insert(categories: List<Category>) {
+        categoryDao.insert(categories)
+    }
+
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun delete(category: Category) {
+        categoryDao.delete(category)
+    }
 }

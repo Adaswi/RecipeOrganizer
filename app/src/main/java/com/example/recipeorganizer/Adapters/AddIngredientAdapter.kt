@@ -9,7 +9,7 @@ import com.example.recipeorganizer.Models.Ingredient
 import com.example.recipeorganizer.R
 import com.example.recipeorganizer.ViewHolders.AddIngredientViewHolder
 
-class IngredientAdapter(ingredients: MutableList<Ingredient>): ListAdapter<Ingredient, AddIngredientViewHolder>(
+class AddIngredientAdapter(ingredients: MutableList<Ingredient>): ListAdapter<Ingredient, AddIngredientViewHolder>(
     IngredientsComparator()
 ) {
 

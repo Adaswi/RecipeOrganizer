@@ -23,13 +23,13 @@ object RecipeOrganizer {
     }
 
     object IngredientToRecipe : BaseColumns {
-        const val TABLE_NAME = "ingredients_to_recipes"
+        const val TABLE_NAME = "ingredientsToRecipes"
         const val COLUMN_NAME_INGREDIENT_ID = "ingredient_id"
         const val COLUMN_NAME_RECIPE_ID = "recipe_id"
     }
 
     object CategoryToRecipe : BaseColumns {
-        const val TABLE_NAME = "categories_to_recipes"
+        const val TABLE_NAME = "categoriesToRecipes"
         const val COLUMN_NAME_CATEGORY_ID = "category_id"
         const val COLUMN_NAME_RECIPE_ID = "recipe_id"
     }

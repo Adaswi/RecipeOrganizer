@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.recipeorganizer.DAOs.CategoryDao
+import com.example.recipeorganizer.DAOs.IngredientDao
 import com.example.recipeorganizer.DAOs.RecipeDao
 import com.example.recipeorganizer.Models.CategoriesToRecipes
 import com.example.recipeorganizer.Models.Category
@@ -20,10 +21,11 @@ import kotlinx.coroutines.launch
     Ingredient::class,
     Category::class,
     IngredientsToRecipes::class,
-    CategoriesToRecipes::class), version = 2, exportSchema = false)
+    CategoriesToRecipes::class), version = 4, exportSchema = false)
 abstract class RecipeOrganizerDatabase: RoomDatabase() {
     abstract fun recipeDao(): RecipeDao
     abstract fun categoryDao(): CategoryDao
+    abstract fun ingredientDao(): IngredientDao
 
     private class RecipeDatabaseCallback(
         private val scope: CoroutineScope
@@ -35,12 +37,13 @@ abstract class RecipeOrganizerDatabase: RoomDatabase() {
                 scope.launch {
                     var recipeDao = database.recipeDao()
                     var categoryDao = database.categoryDao()
+                    var ingredientDao = database.ingredientDao()
 
                     // Delete all content here.
                     recipeDao.deleteAll()
 
                     // Add sample words.
-                    var recipe = Recipe(
+                    val recipe = Recipe(
                         0,
                         "Spaghetti carbonara",
                         40,
@@ -56,16 +59,37 @@ abstract class RecipeOrganizerDatabase: RoomDatabase() {
                                 "STEP 10 Take the pan of spaghetti and pancetta off the heat. Now quickly pour in the eggs and cheese. Using the tongs or a long fork, lift up the spaghetti so it mixes easily with the egg mixture, which thickens but doesn’t scramble, and everything is coated. " +
                                 "STEP 11 Add extra pasta cooking water to keep it saucy (several tablespoons should do it). You don’t want it wet, just moist. Season with a little salt, if needed. " +
                                 "STEP 12 Use a long-pronged fork to twist the pasta on to the serving plate or bowl. Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper. If the dish does get a little dry before serving, splash in some more hot pasta water and the glossy sauciness will be revived.",
-                        "spaghetti_carbonara"
+                        "8a14a3f1-3dd9-4dfa-8df6-d739c69e356a"
                     )
-                    recipeDao.insert(recipe)
+                    val ingredients: List<Ingredient> = listOf(
+                        Ingredient(0,"Pancetta", "100g"),
+                        Ingredient(0,"Pecorino cheese", "50g"),
+                        Ingredient(0,"Parmesan", "50g"),
+                        Ingredient(0,"Large eggs", "x2"),
+                        Ingredient(0,"Spaghetti", "350g"),
+                        Ingredient(0,"Garlic cloves", "x2"),
+                        Ingredient(0,"Butter", "50g"),
+                        Ingredient(0,"Sea salt", null),
+                        Ingredient(0,"Black pepper", null))
 
+                    val ingredientIds: List<Long> = ingredientDao.insert(ingredients)
 
-                    var category = Category(
-                        0,
-                        "Breakfast"
-                    )
-                    categoryDao.insert(category)
+                    val categories: List<Category> = listOf(
+                        Category(0,"Breakfast"),
+                        Category(0,"Lunch"),
+                        Category(0,"Dinner"),
+                        Category(0,"Supper"))
+
+                    val categoryIds: List<Long> = categoryDao.insert(categories)
+
+                    val recipeId: Long = recipeDao.insert(recipe)
+
+                    for (id in ingredientIds) {
+                        recipeDao.insert(IngredientsToRecipes(0, id.toInt(), recipeId.toInt()))
+                    }
+                    for (id in categoryIds) {
+                        recipeDao.insert(CategoriesToRecipes(0, id.toInt(), recipeId.toInt()))
+                    }
                 }
             }
         }

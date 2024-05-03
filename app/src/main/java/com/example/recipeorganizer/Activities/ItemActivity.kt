@@ -57,7 +57,7 @@ class ItemActivity : AppCompatActivity() {
     fun DisplayRecipe(recipe: Recipe, materialToolbar: MaterialToolbar, imageView: ImageView, prepTimeText: TextView, recipeText: TextView) {
 
 
-        val imgUri: Uri = Uri.parse("android.resource://" + packageName + "/drawable/" + recipe.imagePath)
+        val imgUri: Uri = Uri.parse(baseContext.filesDir.toString() + "/foodImages/" + recipe.imagePath)
         val time = recipe.preparationTime
 
         materialToolbar.setNavigationOnClickListener {

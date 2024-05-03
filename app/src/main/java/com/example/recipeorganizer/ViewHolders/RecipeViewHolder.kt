@@ -15,7 +15,7 @@ class RecipeViewHolder(itemView: View) : ViewHolder(itemView) {
     val image = itemView.findViewById<ImageView>(R.id.image_small)
 
     fun bind(id: Int, name: String, preparationTime: Int, instructions: String, imagePath:String) {
-        val imgUri: Uri = Uri.parse("android.resource://com.example.recipeorganizer/drawable/" + imagePath + "_small")
+        val imgUri: Uri = Uri.parse(itemView.context.filesDir.toString() + "/foodImages/" + imagePath)
 
         val time = preparationTime
         val text: String
